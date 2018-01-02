@@ -18,13 +18,13 @@ Inspired by **HITCON CTF 2017 - secret server**
 
 Base on the `baby-lea` challenge
 
-I encrypt the `token` with AES
+This time `token` is encrypted with AES
 
-But notice the `unpad` function just remove the bytes according to the last byte without checking
+But notice what the `unpad` function do is just removing the bytes according to the last byte without checking
 
-So we could append two blocks to the token and use `unpad` to remove it completely without affecting the auth code
+So we could append any number of blocks to the token and use `unpad` function to remove it completely without affecting the auth code
 
-And the token in `if b"user=admin" in token` is the token before `unpad`
+Meantime, the token in `if b"user=admin" in token` is the token before `unpad`
 
 Here is the question, how do we modify the plain text without knowing the key of AES?
 
@@ -41,19 +41,19 @@ Inspired by **HITCON CTF 2017 - secret server**
 
 Base on the `baby-lea-revenge` challenge
 
-This time we need to make the token after `unpad` exactly same as "user=admin"
+This time we need to make the token after `unpad` exactly the same as "user=admin"
 
-And the original token is forbidden, that is we can't use it to alter the token
+Also, the original token is forbidden, that is we can't use it to alter the token
 
-But remember that salt is also `unpad`, together with token
+But notice that salt is also affected by `unpad`, together with token
 
 So we can leak salt by controlling the last byte and make the plaintext be salt[:1], salt[:2], salt[:3], ...
 
-Then try sending auth code with value `sha256('a')`, `sha256('b')`, `sha256('c')`, ... to bruteforce each characters
+Then try sending auth code with value `sha256('a')`, `sha256('b')`, `sha256('c')`, ... to bruteforce each character
 
 Here is the question, how do we modify the plain text without using the original token
 
-Just leak the whatever plaintext you want with the previous trick :)
+Just leak whatever plaintext you want with the previous trick :)
 
 ## mini-padding
 
