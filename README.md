@@ -47,9 +47,9 @@ Also, the original token is forbidden, that is we can't use it to alter the toke
 
 But notice that salt is also affected by `unpad`, together with token
 
-So we can leak salt by controlling the last byte and make the plaintext be salt[:1], salt[:2], salt[:3], ...
+So we can leak salt by controlling the last byte and make the plaintext be `salt[:1], salt[:2], salt[:3], ...`
 
-Then try sending auth code with value `sha256('a')`, `sha256('b')`, `sha256('c')`, ... to bruteforce each character
+Then try sending auth code with value `sha256('a'), sha256('b'), sha256('c'), ...` to bruteforce each character
 
 Here is the question, how do we modify the plain text without using the original token
 
