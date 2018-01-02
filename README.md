@@ -2,7 +2,7 @@
 
 ## baby-lea
 
-Solved: **11/150**  
+Solved: **11 / 150**  
 Category: **CRYPTO**
 
 Classic **length extension attack**
@@ -11,7 +11,7 @@ Just use [hashpump](https://github.com/bwall/HashPump)
 
 ## baby-lea-revenge
 
-Solved: **3/150**  
+Solved: **3 / 150**  
 Category: **CRYPTO**
 
 Inspired by **HITCON CTF 2017 - secret server**
@@ -34,7 +34,7 @@ It's CBC magic
 
 ## baby-lea-impossible
 
-Solved: **2/150**  
+Solved: **2 / 150**  
 Category: **CRYPTO**
 
 Inspired by **HITCON CTF 2017 - secret server**
@@ -57,7 +57,7 @@ Just leak the whatever plaintext you want with the previous trick :)
 
 ## mini-padding
 
-Solved: **6/150**  
+Solved: **6 / 150**  
 Category: **CRYPTO**
 
 Classic **padding oracle attack**
@@ -66,7 +66,7 @@ Just write a script
 
 ## toddler-notakto
 
-Solved: **1/150**  
+Solved: **1 / 150**  
 Category: **PWN**
 
 This challenge has one-null-byte-overflow, overflow the last byte of `_IO_buf_base` and got a arbitary write
@@ -75,14 +75,14 @@ Since the binary is `partial RELRO`, just modify the one of the functions at GOT
 
 ## toddler-notakto-revenge
 
-Solved: **12/150**  
+Solved: **12 / 150**  
 Category: **PPC**
 
 Use my repo: [Notakto](https://github.com/OAlienO/Notakto)
 
 ## toddler-notakto-impossible
 
-Solved: **0/150**  
+Solved: **0 / 150**  
 Category: **PPC**
 
 Use my repo: [Notakto](https://github.com/OAlienO/Notakto)
