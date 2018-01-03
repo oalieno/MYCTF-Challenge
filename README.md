@@ -71,7 +71,7 @@ Category: **PWN**
 
 This challenge has one-null-byte-overflow, overflow the last byte of `_IO_buf_base` and got a arbitary write
 
-Since the binary is `partial RELRO`, just modify the one of the functions at GOT table to one_gadget
+Since the binary is `partial RELRO`, just modify one of the functions at GOT table to one_gadget
 
 ## toddler-notakto-revenge
 
