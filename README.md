@@ -4,8 +4,9 @@
 
 ### baby-lea
 
-Solved: **11 / 150**  
-Category: **CRYPTO**
+| category | solves |
+| :-: | :-: |
+| CRYPTO | 11 / 150 |
 
 Classic **length extension attack**
 
@@ -13,8 +14,9 @@ Just use [hashpump](https://github.com/bwall/HashPump)
 
 ### baby-lea-revenge
 
-Solved: **3 / 150**  
-Category: **CRYPTO**
+| category | solves |
+| :-: | :-: |
+| CRYPTO | 3 / 150 |
 
 Inspired by **HITCON CTF 2017 - secret server**
 
@@ -36,8 +38,9 @@ It's CBC magic
 
 ### baby-lea-impossible
 
-Solved: **2 / 150**  
-Category: **CRYPTO**
+| category | solves |
+| :-: | :-: |
+| CRYPTO | 2 / 150 |
 
 Inspired by **HITCON CTF 2017 - secret server**
 
@@ -59,8 +62,9 @@ Just leak whatever plaintext you want with the previous trick :)
 
 ### mini-padding
 
-Solved: **6 / 150**  
-Category: **CRYPTO**
+| category | solves |
+| :-: | :-: |
+| CRYPTO | 6 / 150 |
 
 Classic **padding oracle attack**
 
@@ -68,8 +72,9 @@ Just write a script
 
 ### toddler-notakto
 
-Solved: **1 / 150**  
-Category: **PWN**
+| category | solves |
+| :-: | :-: |
+| PWN | 1 / 150 |
 
 This challenge has one-null-byte-overflow, overflow the last byte of `_IO_buf_base` and got a arbitary write
 
@@ -77,25 +82,35 @@ Since the binary is `partial RELRO`, just modify one of the functions at GOT tab
 
 ### toddler-notakto-revenge
 
-Solved: **12 / 150**  
-Category: **PPC**
+| category | solves |
+| :-: | :-: |
+| PPC | 12 / 150 |
 
 Use my repo: [Notakto](https://github.com/OAlienO/Notakto)
 
 ### toddler-notakto-impossible
 
-Solved: **0 / 150**  
-Category: **PPC**
+| category | solves |
+| :-: | :-: |
+| PPC | 0 / 150 |
 
 Use my repo: [Notakto](https://github.com/OAlienO/Notakto)
 
 ## BAMBOOFOX CTF 2020
 
-### oracle
+### Oracle
+
+| category | points | solves |
+| :-: | :-: | :-: |
+| CRYPTO | 270 | 28 / 837 |
 
 RSA LSB oracle
 
 ### Oil Circuit Breaker
+
+| category | points | solves |
+| :-: | :-: | :-: |
+| CRYPTO | 714 | 5 / 837 |
 
 The attack follow this paper https://eprint.iacr.org/2019/311.pdf
 
