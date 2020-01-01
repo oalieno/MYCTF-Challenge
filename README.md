@@ -1,6 +1,8 @@
 # MY CTF Challenge
 
-## baby-lea
+## BAMBOOFOX CTF 2018
+
+### baby-lea
 
 Solved: **11 / 150**  
 Category: **CRYPTO**
@@ -9,7 +11,7 @@ Classic **length extension attack**
 
 Just use [hashpump](https://github.com/bwall/HashPump)
 
-## baby-lea-revenge
+### baby-lea-revenge
 
 Solved: **3 / 150**  
 Category: **CRYPTO**
@@ -32,7 +34,7 @@ If we already know a pair of (IV, ciphertext, plaintext), we could modify the pl
 
 It's CBC magic
 
-## baby-lea-impossible
+### baby-lea-impossible
 
 Solved: **2 / 150**  
 Category: **CRYPTO**
@@ -55,7 +57,7 @@ Here is the question, how do we modify the plain text without using the original
 
 Just leak whatever plaintext you want with the previous trick :)
 
-## mini-padding
+### mini-padding
 
 Solved: **6 / 150**  
 Category: **CRYPTO**
@@ -64,7 +66,7 @@ Classic **padding oracle attack**
 
 Just write a script
 
-## toddler-notakto
+### toddler-notakto
 
 Solved: **1 / 150**  
 Category: **PWN**
@@ -73,16 +75,30 @@ This challenge has one-null-byte-overflow, overflow the last byte of `_IO_buf_ba
 
 Since the binary is `partial RELRO`, just modify one of the functions at GOT table to one_gadget
 
-## toddler-notakto-revenge
+### toddler-notakto-revenge
 
 Solved: **12 / 150**  
 Category: **PPC**
 
 Use my repo: [Notakto](https://github.com/OAlienO/Notakto)
 
-## toddler-notakto-impossible
+### toddler-notakto-impossible
 
 Solved: **0 / 150**  
 Category: **PPC**
 
 Use my repo: [Notakto](https://github.com/OAlienO/Notakto)
+
+## BAMBOOFOX CTF 2020
+
+### oracle
+
+RSA LSB oracle
+
+### Oil Circuit Breaker
+
+The attack follow this paper https://eprint.iacr.org/2019/311.pdf
+
+To do universal forgery with only 2 encryption oracles and 1 decryption oracles.  
+First use 1 encryption oracle and 1 decryption oracle to get a few of random mappings.  
+Then, you can brute force the last byte of the block to get the ciphertext and tag with only 1 encryption oracle.
