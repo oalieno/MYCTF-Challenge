@@ -117,3 +117,34 @@ The attack follow this paper https://eprint.iacr.org/2019/311.pdf
 To do universal forgery with only 2 encryption oracles and 1 decryption oracles.  
 First use 1 encryption oracle and 1 decryption oracle to get a few of random mappings.  
 Then, you can brute force the last byte of the block to get the ciphertext and tag with only 1 encryption oracle.
+
+## EOF CTF Quals 2020
+
+### Train
+
+This challenge is CBC block cipher mode using RSA. `date, session, secret = plain.split(b'|')` this line may cause error if there is not enough '|'. You can use the error message to recover flag just like padding oracle attack.
+
+I forgot to change the value of public exponent `e` to higher value, and introduce an unintended solution. Simply use coppersmith method can also recover the flag.
+
+### RSACTR
+
+This challenge is CTR block cipher mode using RSA. First you can use option 3 to encrypt 0 and recover nonce. Then use option 2 to get encrypted flag `c`. Once you get nonce and encrypted flag, you can write out an equation `(c - flag) ^ 3 = nonce`. And simply use coppersmith method to get the small root `flag`.
+
+### RSACTR-revenge
+
+This challenge is the same as the previous challenge except there is no option 3 to recover nonce. We can get three different encrypted flag.
+
+```
+(c1 - flag) ^ 3 = nonce
+(c2 - flag) ^ 3 = nonce + 2020
+(c3 - flag) ^ 3 = nonce + 4040
+```
+
+Use elementary algebra can eliminate the nonce variable.
+
+```
+(c2 - flag) ^ 3 - (c1 - flag) ^ 3 = 2020
+(c3 - flag) ^ 3 - (c2 - flag) ^ 3 = 2020
+```
+
+These two equations have the same root `flag`, so they will have a common divisor. Simply do a gcd algorithm will reveal the flag. This trick is basically the same as [Franklin-Reiter Related Message Attack](https://oalieno.github.io/security/crypto/asymmetric/rsa/coppersmith/franklin-reiter/).
